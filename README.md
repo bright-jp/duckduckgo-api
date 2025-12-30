@@ -1,11 +1,11 @@
 # DuckDuckGo Search Scraper
 
-[![Promo](https://media.brightdata.com/2025/08/SERP-API-50-off-GitHub-banner_1389_166.png)](https://brightdata.com/products/serp-api/duckduckgo-search)
+[![Promo](https://media.brightdata.com/2025/08/SERP-API-50-off-GitHub-banner_1389_166.png)](https://brightdata.jp/products/serp-api/duckduckgo-search)
 
-This repository offers two solutions for extracting data from DuckDuckGo Search Engine Results Pages (SERPs):
+このリポジトリでは、DuckDuckGoの検索エンジン結果ページ（SERPs）からデータを抽出するための2つのソリューションを提供します。
 
-- **Free DuckDuckGo Scraper:** A tool for scraping DuckDuckGo Search Results at small scale
-- **Enterprise-grade DuckDuckGo SERP API:** A scalable, production-ready solution for high-volume, real-time data extraction (part of [Bright Data's SERP Scraper API](https://brightdata.com/products/serp-api))
+- **無料 DuckDuckGo Scraper:** 小規模でDuckDuckGo検索結果をスクレイピングするためのツール
+- **エンタープライズグレード DuckDuckGo SERP API:** 大量・リアルタイムのデータ抽出に対応した、スケーラブルで本番運用可能なソリューション（[Bright Data's SERP Scraper API](https://brightdata.jp/products/serp-api) の一部）
 
 ## Table of Contents
 
@@ -30,7 +30,7 @@ This repository offers two solutions for extracting data from DuckDuckGo Search 
 - [Support & Resources](#support--resources)
 
 ## Free DuckDuckGo SERP Scraper
-The Free DuckDuckGo SERP Scraper offers a straightforward method for collecting search result data on a smaller scale. It’s perfect if you need limited data without the overhead of managing proxies or handling high volumes.
+Free DuckDuckGo SERP Scraperは、小規模に検索結果データを収集するためのシンプルな方法を提供します。プロキシの管理や大量処理のオーバーヘッドなしで、限られたデータが必要な場合に最適です。
 
 <img width="800" alt="free-duckduckgo-serp-scraper" src="https://github.com/luminati-io/duckduckgo-api/blob/main/images/428465443-0472593e-615c-4723-96e7-08f83cb0b477.png" />
 
@@ -38,23 +38,23 @@ The Free DuckDuckGo SERP Scraper offers a straightforward method for collecting 
 
 - **Python 3.9+** – [Download Python](https://www.python.org/downloads/)
 - **Required Packages:**
-    - `selenium` (for browser automation)
-    - `webdriver-manager` (for managing browser drivers)
-    - `beautifulsoup4` (for HTML parsing)
+    - `selenium`（ブラウザ自動化用）
+    - `webdriver-manager`（ブラウザドライバー管理用）
+    - `beautifulsoup4`（HTML解析用）
 
-Install the packages using:
+以下でパッケージをインストールします：
 ```bash
 pip install selenium webdriver-manager beautifulsoup4
 ```
 
-> **New to Web Scraping?** <br>
-Kickstart your journey with our [Beginner’s Guide to Web Scraping with Python](https://brightdata.com/blog/how-tos/web-scraping-with-python). Then, level up with our [Using Selenium for Web Scraping](https://brightdata.com/blog/how-tos/using-selenium-for-web-scraping) tutorial, and if you’re already comfortable with Selenium, take your skills further with our advanced [SeleniumBase guide](https://brightdata.com/blog/web-data/web-scraping-with-seleniumbase).
+> **Webスクレイピングが初めてですか？** <br>
+まずは [Beginner’s Guide to Web Scraping with Python](https://brightdata.jp/blog/how-tos/web-scraping-with-python) で学習を始めてください。次に、[Using Selenium for Web Scraping](https://brightdata.jp/blog/how-tos/using-selenium-for-web-scraping) チュートリアルでレベルアップし、すでにSeleniumに慣れている場合は、高度な [SeleniumBase guide](https://brightdata.jp/blog/web-data/web-scraping-with-seleniumbase) でさらにスキルを伸ばしてください。
 >
 
 ### Quick Start Guide
 
-1. Open the [duckduckgo-serp-scraper.py](https://github.com/triposat/DuckDuckGo-Search-Scraper/blob/main/duckduckgo-serp-scraper/duckduckgo-serp-scraper.py) file.
-2. Customize the search terms as needed:
+1. [duckduckgo-serp-scraper.py](https://github.com/triposat/DuckDuckGo-Search-Scraper/blob/main/duckduckgo-serp-scraper/duckduckgo-serp-scraper.py) ファイルを開きます。
+2. 必要に応じて検索語をカスタマイズします：
     
     ```python
     SEARCH_TERMS = [
@@ -63,56 +63,56 @@ Kickstart your journey with our [Beginner’s Guide to Web Scraping with Python]
     ]
     ```
     
-3. Run the script to begin scraping.
+3. スクリプトを実行してスクレイピングを開始します。
 
 ### Sample Output
-Below is a preview of the scraper output:
+以下はスクレイパーの出力プレビューです：
 
 <img width="800" alt="free-duckduckgo-serp-scraper-output" src="https://github.com/luminati-io/duckduckgo-api/blob/main/images/428465286-d6891a93-2b5f-4243-8a17-e2a037c91570.png" />
 
 
 ### Limitations
 
-Keep in mind that while the free scraper is great for basic tasks, it has some important limitations:
+無料スクレイパーは基本的なタスクには便利ですが、以下の重要な制限がある点に注意してください：
 
-- High risk of IP blocking with frequent use
-- Limited request volume capacity
-- Frequent CAPTCHA interruptions
-- Not suitable for production environments
+- 頻繁に使用するとIPアドレスをブロックされるリスクが高い
+- リクエスト量の対応能力が限定的
+- CAPTCHAの中断が頻繁に発生
+- 本番環境には不向き
 
-For a scalable and stable solution, consider Bright Data's dedicated API detailed below 👇
+スケーラブルで安定したソリューションが必要な場合は、以下で説明するBright Dataの専用APIをご検討ください 👇
 
 ## DuckDuckGo SERP API
 
-The DuckDuckGo SERP API is part of Bright Data’s comprehensive [SERP Scraper API](https://brightdata.com/products/serp-api) suite. It leverages our industry-leading [DuckDuckGo proxy infrastructure](https://brightdata.com/solutions/duckduckgo-proxies) to deliver real-time DuckDuckGo search results with a single API call.
+DuckDuckGo SERP APIは、Bright Dataの包括的な [SERP Scraper API](https://brightdata.jp/products/serp-api) スイートの一部です。業界をリードする [DuckDuckGo proxy infrastructure](https://brightdata.jp/solutions/duckduckgo-proxies) を活用し、単一のAPI呼び出しでリアルタイムのDuckDuckGo検索結果を提供します。
 
 ### Key Benefits
 
-- **Global Accuracy**: Get tailored results for specific locations worldwide.
-- **Pay-Per-Success**: You pay only for successful requests.
-- **Real-Time Data**: Access up-to-date search results in seconds.
-- **Unlimited Scalability**: Handle high-volume scraping effortlessly.
-- **Cost-Efficient**: No need for expensive infrastructure.
-- **Reliable Performance**: Advanced anti-blocking technology ensures consistent results.
-- **24/7 Expert Support**: Get assistance whenever you need it.
+- **グローバルな精度**: 世界中の特定ロケーション向けに最適化された結果を取得できます。
+- **Pay-Per-Success**: 成功したリクエストに対してのみ料金が発生します。
+- **リアルタイムデータ**: 数秒で最新の検索結果にアクセスできます。
+- **無制限のスケーラビリティ**: 大量スクレイピングを容易に処理できます。
+- **コスト効率**: 高価なインフラは不要です。
+- **信頼性の高いパフォーマンス**: 高度なアンチブロッキング技術により一貫した結果を確保します。
+- **24/7 エキスパートサポート**: 必要なときにいつでも支援を受けられます。
 
-📌 Try Before You Buy: Experience our solution with the [SERP API Live Demo](https://brightdata.com/products/serp-api/duckduckgo-search).
+📌 Try Before You Buy: [SERP API Live Demo](https://brightdata.jp/products/serp-api/duckduckgo-search) でソリューションを体験できます。
 
 <img width="800" alt="bright-data-serp-api-playground" src="https://github.com/luminati-io/duckduckgo-api/blob/main/images/428471522-fc60e165-e4db-41d2-93eb-2b6a01398353.png" />
 
 ### Getting Started
 
-1. [Create a Bright Data account](https://brightdata.com/) (new users receive a $5 credit).
-2. Generate your [API key](https://docs.brightdata.com/general/account/api-token).
-3. Follow our [step-by-step configuration guide](https://github.com/triposat/DuckDuckGo-Search-Scraper/blob/main/setup-serp-api.md) to integrate the SERP API.
+1. [Bright Dataアカウントを作成](https://brightdata.jp/) します（新規ユーザーには$5クレジットが付与されます）。
+2. [API key](https://docs.brightdata.com/general/account/api-token) を生成します。
+3. [step-by-step configuration guide](https://github.com/triposat/DuckDuckGo-Search-Scraper/blob/main/setup-serp-api.md) に従ってSERP APIを統合します。
 
 ## Implementation Methods
 
-You can integrate the DuckDuckGo SERP API into your workflow using one of two approaches:
+以下の2つの方法のいずれかで、DuckDuckGo SERP APIをワークフローに統合できます：
 
 ### Direct API Access
 
-Make a direct request to Bright Data’s API endpoint.
+Bright DataのAPIエンドポイントへ直接リクエストします。
 
 #### cURL Example
 
@@ -155,7 +155,7 @@ print("Response saved!")
 
 ### Native Proxy-Based Access
 
-Use proxy routing for direct access to search results.
+検索結果へ直接アクセスするために、プロキシルーティングを使用します。
 
 #### cURL Example
 
@@ -195,21 +195,21 @@ with open("duckduckgo-scraper-api-result.html", "w", encoding="utf-8") as file:
 print("Response saved!")
 ```
 
-> Note: For production use with the native proxy approach, installing Bright Data’s SSL certificate is recommended. Refer to our [SSL Certificate Guide](https://docs.brightdata.com/general/account/ssl-certificate) for details.
+> Note: ネイティブプロキシ方式を本番運用で使用する場合は、Bright DataのSSL証明書をインストールすることを推奨します。詳細は [SSL Certificate Guide](https://docs.brightdata.com/general/account/ssl-certificate) を参照してください。
 > 
 
-👉 For a full preview of the HTML output, see the [complete result](https://github.com/triposat/DuckDuckGo-Search-Scraper/blob/main/duckduckgo-scraper-api-output/duckduckgo-scraper-api-result.html).
+👉 HTML出力の完全なプレビューについては、[complete result](https://github.com/triposat/DuckDuckGo-Search-Scraper/blob/main/duckduckgo-scraper-api-output/duckduckgo-scraper-api-result.html) をご覧ください。
 
 
 ## DuckDuckGo Search Query Parameters
 
-Fine-tune your search results by using various query parameters.
+さまざまなクエリパラメータを使用して検索結果を微調整できます。
 
 ### Localization
 
 #### Country and Language (`kl`)
 
-Specifies the country and language for search results.
+検索結果の国と言語を指定します。
 
 *Example:*
 
@@ -219,11 +219,11 @@ curl --proxy brd.superproxy.io:33335 \
      "https://duckduckgo.com/?q=best+coffee+brands&kl=it-it"
 ```
 
-This returns search results tailored for Italy.
+これはイタリア向けに最適化された検索結果を返します。
 
 #### Interface Language (`kad`)
 
-Controls the language of the DuckDuckGo interface.
+DuckDuckGoインターフェースの言語を制御します。
 
 *Example:*
 
@@ -231,17 +231,17 @@ Controls the language of the DuckDuckGo interface.
 https://duckduckgo.com/?q=photo+editing+tools&kad=de
 ```
 
-This keeps the search content in English while displaying the interface in German.
+これにより、検索コンテンツは英語のまま、インターフェースがドイツ語で表示されます。
 
 ### Safe Search Configuration (`kp`)
 
-Adjusts content filtering for adult material.
+成人向けコンテンツに対するフィルタリングを調整します。
 
 #### Values
 
-- `1` – Strict Safe Search
-- `-1` – Moderate
-- `-2` – Off
+- `1` – 厳格なSafe Search
+- `-1` – 中程度
+- `-2` – オフ
 
 *Example:*
 
@@ -249,19 +249,19 @@ Adjusts content filtering for adult material.
 https://duckduckgo.com/?q=swimsuit&kp=1
 ```
 
-Returns only family-safe results for *"swimsuit”.*
+*"swimsuit”* に対してファミリー向けの結果のみを返します。
 
 ### Time Range Filtering (`df`)
 
-Limits search results to a specific time frame.
+検索結果を特定の期間に限定します。
 
 #### Values
 
-- `d` – Past day
-- `w` – Past week
-- `m` – Past month
-- `y` – Past year
-- *Custom range:* e.g., `2025-03-01..2025-03-10`
+- `d` – 過去1日
+- `w` – 過去1週間
+- `m` – 過去1か月
+- `y` – 過去1年
+- *Custom range:* 例：`2025-03-01..2025-03-10`
 
 *Example:*
 
@@ -269,16 +269,16 @@ Limits search results to a specific time frame.
 https://duckduckgo.com/?q=iphone+15+review&df=w
 ```
 
-Shows only recent reviews (within the last week).
+直近（過去1週間）のレビューのみを表示します。
 
 ### Device Targeting (`brd_mobile`)
 
-Simulate searches from various device types.
+さまざまなデバイスタイプからの検索をシミュレートします。
 
 #### Options
 
-- `0` – Desktop (default)
-- `1` – Random mobile device
+- `0` – デスクトップ（デフォルト）
+- `1` – ランダムなモバイルデバイス
 - `ios` or `iphone` – iPhone
 - `ipad` or `ios_tablet` – iPad
 - `android` – Android phone
@@ -290,38 +290,38 @@ Simulate searches from various device types.
 https://duckduckgo.com/?q=top+travel+apps&brd_mobile=ios
 ```
 
-This simulates an iPhone user. You might see app store links, mobile-focused content, or AMP pages.
+これはiPhoneユーザーをシミュレートします。App Storeリンク、モバイル向けコンテンツ、またはAMPページが表示される場合があります。
 
 ### Browser Emulation (`brd_browser`)
 
-Specify the browser’s user-agent for the request.
+リクエストに使用するブラウザのuser-agentを指定します。
 
 #### Options
 
-- Default (random browser)
+- Default（ランダムなブラウザ）
 - `chrome` – Google Chrome
 - `safari` – Safari
-- `firefox` – Mozilla Firefox *(not compatible with `brd_mobile=1`)*
+- `firefox` – Mozilla Firefox *( `brd_mobile=1` とは互換性がありません)*
 
 *Example:*
 
 ```bash
 https://duckduckgo.com/?q=best+vpn+services&brd_browser=safari
 ```
-This simulates a Safari browser, providing insights into how content is displayed and ranked on that platform.
+これはSafariブラウザをシミュレートし、そのプラットフォームでコンテンツがどのように表示・ランキングされるかの把握に役立ちます。
 
 ## Practical Example
 
-You're monitoring competitors' pricing pages for *"budget laptops under £500"* in the UK, targeting mobile users.
+英国で *"budget laptops under £500"* の競合の価格ページを監視しており、モバイルユーザーをターゲットにしています。
 
-Your goal is to:
+目的は以下のとおりです：
 
-- Simulate a UK-based mobile user
-- Get localized English results (UK-specific retailers, currency)
-- Use a mobile Chrome user agent (to capture mobile-specific results like AMP pages)
-- Focus on recent product listicles or deals
+- 英国ベースのモバイルユーザーをシミュレートする
+- ローカライズされた英語の結果を取得する（英国の小売業者、通貨）
+- モバイル向けChrome user agentを使用する（AMPページなどモバイル固有の結果を取得するため）
+- 最近の製品まとめ記事やセールに注目する
 
-Combine these requirements in a single cURL command:
+これらの要件を1つのcURLコマンドにまとめます：
 
 ```bash
 curl --proxy brd.superproxy.io:33335 \
@@ -334,7 +334,7 @@ df=w&\
 brd_mobile=android&\
 brd_browser=chrome"
 ```
-🎯 This fetches **mobile-first**, **localized**, and **recent** content.
+🎯 これにより、**モバイルファースト**、**ローカライズ**、かつ**最新**のコンテンツを取得できます。
 
 ## Support & Resources
 
@@ -349,7 +349,7 @@ brd_browser=chrome"
     - [Google Flights API](https://github.com/luminati-io/google-flights-api)
     - [Web Unlocker API](https://github.com/luminati-io/web-unlocker-api)
 - **Use Cases:**
-    - [SEO & SERP Tracking](https://brightdata.com/use-cases/serp-tracking)
-    - [Travel Industry Data](https://brightdata.com/use-cases/travel)
-- **Additional Reading:** [Best SERP APIs](https://brightdata.com/blog/web-data/best-serp-apis)
+    - [SEO & SERP Tracking](https://brightdata.jp/use-cases/serp-tracking)
+    - [Travel Industry Data](https://brightdata.jp/use-cases/travel)
+- **Additional Reading:** [Best SERP APIs](https://brightdata.jp/blog/web-data/best-serp-apis)
 - **Contact Support:** [support@brightdata.com](mailto:support@brightdata.com)
